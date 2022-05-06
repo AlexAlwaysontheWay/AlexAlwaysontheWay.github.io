@@ -97,10 +97,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://jevinz.github.io/undefined/2022-05-05刷题笔记/">
+  <link rel="canonical" href="https://jevinz.github.io/undefined/2022-05-06刷题笔记/">
   <title>
     
-      2022_05_05刷题笔记 - Always on the way
+      2022_05_06刷题笔记 - Always on the way
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -345,11 +345,11 @@
             <div class="tags">
               
             </div>
-            <h1>2022_05_05刷题笔记</h1>
+            <h1>2022_05_06刷题笔记</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Jia wei on
-              2022-05-05
+              2022-05-06
             </span>
 
 
@@ -357,11 +357,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">6</span> Minutes
+              Estimated Reading Time <span class="post-count">10</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.6k</span> In Total
+              Words <span class="post-count">2.8k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -423,149 +423,98 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>2022_05_05 刷题笔记</h1>
-<h2 id="絮絮叨叨">絮絮叨叨</h2>
-<p>快（苦）乐（逼）的劳动节5天假期就这么结束了，今天又开始上班了，虽然想想心有不甘但好像疫情原因大家都出不去，那就这样吧，等疫情散去，希望我们能活得更快乐！今天天气也是大晴天呀，那就开始今天的刷题叭！</p>
-<h2 id="哈希表-基础">哈希表-基础</h2>
-<p>哈希表的实现通常有：</p>
+        <h1 id="2022-05-06刷题笔记"><a href="#2022-05-06刷题笔记" class="headerlink" title="2022_05_06刷题笔记"></a>2022_05_06刷题笔记</h1><h2 id="絮絮叨叨"><a href="#絮絮叨叨" class="headerlink" title="絮絮叨叨"></a>絮絮叨叨</h2><p>昨天已经做了核酸，但是因为结果出来不及时还是被弹窗了（郁闷）。外面下了点小雨，有点冷。开始今天的刷题吧！</p>
+<h2 id="二叉树-基础"><a href="#二叉树-基础" class="headerlink" title="二叉树-基础"></a>二叉树-基础</h2><p>二叉树的定义（<strong>在现场面试的时候面试官可能要求手写代码，所以数据结构的定义以及简单逻辑的代码一定要锻炼白纸写出来）</strong>：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode *left;</span><br><span class="line">    TreeNode *right;</span><br><span class="line">    <span class="built_in">TreeNode</span>(<span class="keyword">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">NULL</span>), <span class="built_in">right</span>(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> &#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="keyword">int</span> val;</span><br><span class="line">		TreeNode *left;</span><br><span class="line">		TreeNode *right;</span><br><span class="line">		<span class="built_in">TreeNode</span>(<span class="keyword">int</span> x) &#123;</span><br><span class="line">			<span class="keyword">this</span>-&gt;val = x;</span><br><span class="line">			<span class="keyword">this</span>-&gt;left = <span class="literal">NULL</span>;</span><br><span class="line">			<span class="keyword">this</span>-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode2</span> &#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="keyword">int</span> val;</span><br><span class="line">		TreeNode *left;</span><br><span class="line">		TreeNode *right;</span><br><span class="line">		<span class="built_in">TreeNode2</span>(<span class="keyword">int</span> x): <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">NULL</span>), <span class="built_in">right</span>(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="二叉树-递归遍历"><a href="#二叉树-递归遍历" class="headerlink" title="二叉树-递归遍历"></a>二叉树-递归遍历</h2><p>递归算法的三要素：</p>
+<ol>
+<li><strong>确定递归函数的参数和返回值：</strong> 确定哪些参数是递归的过程中需要处理的，那么就在递归函数里加上这个参数， 并且还要明确每次递归的返回值是什么进而确定递归函数的返回类型。</li>
+<li><strong>确定终止条件：</strong> 写完了递归算法, 运行的时候，经常会遇到栈溢出的错误，就是没写终止条件或者终止条件写的不对，操作系统也是用一个栈的结构来保存每一层递归的信息，如果递归没有终止，操作系统的内存栈必然就会溢出。</li>
+<li><strong>确定单层递归的逻辑：</strong> 确定每一层递归需要处理的信息。在这里也就会重复调用自己来实现递归的过程。</li>
+</ol>
+<h2 id="二叉树-迭代遍历"><a href="#二叉树-迭代遍历" class="headerlink" title="二叉树-迭代遍历"></a>二叉树-迭代遍历</h2><h3 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h3><p>前序遍历是中左右，每次先处理的是中间节点，那么先将根节点放入栈中，然后将右孩子加入栈，再加入左孩子。</p>
+<p>为什么要先加入右孩子，再加入左孩子呢？ 因为这样出栈的时候才是中左右的顺序。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">preorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        vector&lt;<span class="keyword">int</span>&gt; result;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> result;</span><br><span class="line">        st.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span> (!st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            TreeNode* node = st.<span class="built_in">top</span>();                       <span class="comment">// 中</span></span><br><span class="line">            st.<span class="built_in">pop</span>();</span><br><span class="line">            result.<span class="built_in">push_back</span>(node-&gt;val);</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;right) st.<span class="built_in">push</span>(node-&gt;right);           <span class="comment">// 右（空节点不入栈）</span></span><br><span class="line">            <span class="keyword">if</span> (node-&gt;left) st.<span class="built_in">push</span>(node-&gt;left);             <span class="comment">// 左（空节点不入栈）</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h3><p>再来看后序遍历，先序遍历是中左右，后续遍历是左右中，那么我们只需要调整一下先序遍历的代码顺序，就变成中右左的遍历顺序，然后在反转result数组，输出的结果顺序就是左右中了。</p>
+<p><strong>所以后序遍历只需要前序遍历的代码稍作修改就可以了，代码如下：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        vector&lt;<span class="keyword">int</span>&gt; result;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> result;</span><br><span class="line">        st.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span> (!st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            TreeNode* node = st.<span class="built_in">top</span>();</span><br><span class="line">            st.<span class="built_in">pop</span>();</span><br><span class="line">            result.<span class="built_in">push_back</span>(node-&gt;val);</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;left) st.<span class="built_in">push</span>(node-&gt;left); <span class="comment">// 相对于前序遍历，这更改一下入栈顺序 （空节点不入栈）</span></span><br><span class="line">            <span class="keyword">if</span> (node-&gt;right) st.<span class="built_in">push</span>(node-&gt;right); <span class="comment">// 空节点不入栈</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">reverse</span>(result.<span class="built_in">begin</span>(), result.<span class="built_in">end</span>()); <span class="comment">// 将结果反转之后就是左右中的顺序了</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h3><p>为了解释清楚，我说明一下 刚刚在迭代的过程中，其实我们有两个操作：</p>
+<ol>
+<li><strong>处理：将元素放进result数组中</strong></li>
+<li><strong>访问：遍历节点</strong></li>
+</ol>
+<p>分析一下为什么刚刚写的前序遍历的代码，不能和中序遍历通用呢，因为前序遍历的顺序是中左右，先访问的元素是中间节点，要处理的元素也是中间节点，所以刚刚才能写出相对简洁的代码，<strong>因为要访问的元素和要处理的元素顺序是一致的，都是中间节点。</strong></p>
+<p>那么再看看中序遍历，中序遍历是左中右，先访问的是二叉树顶部的节点，然后一层一层向下访问，直到到达树左面的最底部，再开始处理节点（也就是在把节点的数值放进result数组中），这就造成了<strong>处理顺序和访问顺序是不一致的。</strong></p>
+<p>那么<strong>在使用迭代法写中序遍历，就需要借用指针的遍历来帮助访问节点，栈则用来处理节点上的元素。</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="keyword">int</span>&gt; result;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        TreeNode* cur = root;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">NULL</span> || !st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cur != <span class="literal">NULL</span>) &#123; <span class="comment">// 指针来访问节点，访问到最底层</span></span><br><span class="line">                st.<span class="built_in">push</span>(cur); <span class="comment">// 将访问的节点放进栈</span></span><br><span class="line">                cur = cur-&gt;left;                <span class="comment">// 左</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = st.<span class="built_in">top</span>(); <span class="comment">// 从栈里弹出的数据，就是要处理的数据（放进result数组里的数据）</span></span><br><span class="line">                st.<span class="built_in">pop</span>();</span><br><span class="line">                result.<span class="built_in">push_back</span>(cur-&gt;val);     <span class="comment">// 中</span></span><br><span class="line">                cur = cur-&gt;right;               <span class="comment">// 右</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="二叉树-层序遍历"><a href="#二叉树-层序遍历" class="headerlink" title="二叉树-层序遍历"></a>二叉树-层序遍历</h2><p>二叉树的层序遍历主要是依靠队列。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">levelOrder</span>(TreeNode* root) &#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; que;</span><br><span class="line">        <span class="keyword">if</span> (root != <span class="literal">NULL</span>) que.<span class="built_in">push</span>(root);</span><br><span class="line">        vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; result;</span><br><span class="line">        <span class="keyword">while</span> (!que.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="keyword">int</span> size = que.<span class="built_in">size</span>();</span><br><span class="line">            vector&lt;<span class="keyword">int</span>&gt; vec;</span><br><span class="line">            <span class="comment">// 这里一定要使用固定大小size，不要使用que.size()，因为que.size是不断变化的</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;<span class="comment">//对每一层的依次遍历</span></span><br><span class="line">                TreeNode* node = que.<span class="built_in">front</span>();</span><br><span class="line">                que.<span class="built_in">pop</span>();</span><br><span class="line">                vec.<span class="built_in">push_back</span>(node-&gt;val);</span><br><span class="line">                <span class="keyword">if</span> (node-&gt;left) que.<span class="built_in">push</span>(node-&gt;left);</span><br><span class="line">                <span class="keyword">if</span> (node-&gt;right) que.<span class="built_in">push</span>(node-&gt;right);</span><br><span class="line">            &#125;</span><br><span class="line">            result.<span class="built_in">push_back</span>(vec);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="二叉树-翻转二叉树"><a href="#二叉树-翻转二叉树" class="headerlink" title="二叉树-翻转二叉树"></a>二叉树-翻转二叉树</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/invert-binary-tree/">翻转二叉树</a>的解决办法有三种：</p>
+<p>1.利用先序遍历，递归翻转；</p>
+<p>2.利用后序遍历，递归翻转;</p>
+<p>3.利用层序遍历，翻转每个节点的左右子树;</p>
+<p>不能利用中序遍历的原因是，中序遍历先进行左子树翻转，再进行根节点的左右子树翻转后，原来的右子树会变为左子树，所以需要再次对左子树进行翻转。</p>
+<h2 id="二叉树-平衡二叉树"><a href="#二叉树-平衡二叉树" class="headerlink" title="二叉树-平衡二叉树"></a>二叉树-平衡二叉树</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/balanced-binary-tree/">平衡二叉树</a></p>
+<p>比较两个子树高度时，通常采用后序遍历。</p>
+<p>通过本题可以了解求二叉树深度 和 二叉树高度的差异，求深度适合用前序遍历，而求高度适合用后序遍历。</p>
+<p>这里强调一波概念：</p>
 <ul>
-<li>数组</li>
-<li>Set</li>
-<li>Map</li>
+<li>二叉树节点的深度：指从根节点到该节点的最长简单路径边的条数（从根节点起）。</li>
+<li>二叉树节点的高度：指从该节点到叶子节点的最长简单路径边的条数（从叶子节点起）。</li>
 </ul>
-<p>具体地，Set和Map还有以下分类：</p>
-<table>
-<thead>
-<tr>
-<th>集合</th>
-<th>底层实现</th>
-<th>是否有序</th>
-<th>数值是否可以重复</th>
-<th>查询效率</th>
-<th>增删效率</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>std::set</td>
-<td>红黑树</td>
-<td>有序</td>
-<td>否</td>
-<td>O(log n)</td>
-<td>O(log n)</td>
-</tr>
-<tr>
-<td>std::multiset</td>
-<td>红黑树</td>
-<td>有序</td>
-<td>是</td>
-<td>O(log n)</td>
-<td>O(log n)</td>
-</tr>
-<tr>
-<td>std::unordered_set</td>
-<td>哈希表</td>
-<td>无序</td>
-<td>否</td>
-<td>O(1)</td>
-<td>O(1)</td>
-</tr>
-<tr>
-<td>std::map</td>
-<td>红黑树</td>
-<td>有序</td>
-<td>否</td>
-<td>O(log n)</td>
-<td>O(log n)</td>
-</tr>
-<tr>
-<td>std::mutimap</td>
-<td>红黑树</td>
-<td>有序</td>
-<td>是</td>
-<td>O(log n)</td>
-<td>O(log n)</td>
-</tr>
-<tr>
-<td>std::unordered_map</td>
-<td>哈希表</td>
-<td>无序</td>
-<td>否</td>
-<td>O(1)</td>
-<td>O(1)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="哈希表-Set的缺陷">哈希表-Set的缺陷</h2>
-<p>直接使用set 不仅占用空间比数组大，而且速度要比数组慢，set把数值映射到key上都要做hash计算的。</p>
-<p>不要小瞧这个耗时，在数据量大的情况，差距是很明显的。</p>
-<h2 id="哈希表-什么时候使用">哈希表-什么时候使用</h2>
-<p><strong>当我们遇到了要快速判断一个元素是否出现集合里的时候，就要考虑哈希法了。</strong></p>
-<h2 id="哈希表-数组和Set的局限">哈希表-数组和Set的局限</h2>
+<h2 id="二叉树-左叶子之和"><a href="#二叉树-左叶子之和" class="headerlink" title="二叉树-左叶子之和"></a>二叉树-左叶子之和</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sum-of-left-leaves/">左叶子之和</a></p>
+<p>这道题目要求左叶子之和，其实是比较绕的，因为不能判断本节点是不是左叶子节点。</p>
+<p>此时就要通过节点的<strong>父节点</strong>来判断其左孩子是不是左叶子了。</p>
+<p><strong>平时我们解二叉树的题目时，已经习惯了通过节点的左右孩子判断本节点的属性，而本题我们要通过节点的父节点判断本节点的属性。</strong></p>
+<h2 id="二叉树-递归函数什么时候有返回值"><a href="#二叉树-递归函数什么时候有返回值" class="headerlink" title="二叉树-递归函数什么时候有返回值"></a>二叉树-递归函数什么时候有返回值</h2><p>递归函数什么时候需要返回值？什么时候不需要返回值？这里总结如下三点：</p>
 <ul>
-<li>数组的大小是受限制的，而且如果元素很少，而哈希值太大会造成内存空间的浪费。</li>
-<li>set是一个集合，里面放的元素只能是一个key，而两数之和这道题目，不仅要判断y是否存在而且还要记录y的下标位置，因为要返回x 和 y的下标。所以set 也不能用。</li>
+<li>如果需要搜索整棵二叉树且不用处理递归返回值，递归函数就不要返回值。（<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/path-sum-ii/">路径总和ii</a>）</li>
+<li>如果需要搜索整棵二叉树且需要处理递归返回值，递归函数就需要返回值。 （<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/">二叉树的最近公共祖先</a>）</li>
+<li>如果要搜索其中一条符合条件的路径，那么递归一定需要返回值，因为遇到符合条件的路径了就要及时返回。（<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/path-sum/">路径总和</a>）</li>
 </ul>
-<p>此时就要选择另一种数据结构：map ，map是一种key value的存储结构，可以用key保存数值，用value在保存数值所在的下标。</p>
-<p><strong>std::unordered_map的key是无序的，而map和multimap的key是有序的，按需取用。</strong></p>
-<h2 id="字符串-反转">字符串-反转</h2>
-<p>字符串反转除了使用reverse()之外，通常使用的方法是<strong>双指针</strong>进行swap()。</p>
-<h2 id="字符串-数组填充">字符串-数组填充</h2>
-<p><strong>数组填充类的问题，都可以先预先给数组扩容带填充后的大小，然后在从后向前进行操作。以减小复杂度。</strong></p>
-<p>如果采用从前向后填充元素，则每次添加元素都要将后面的复杂度向后移动，复杂度为O(n^2);</p>
-<h2 id="字符串常用函数">字符串常用函数</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s.<span class="built_in">substr</span>(begin,len);<span class="comment">//从s的begin位置截取长度为len的字符串</span></span><br><span class="line"><span class="built_in">reverse</span>(s.<span class="built_in">begin</span>(),s.<span class="built_in">end</span>());<span class="comment">//反转字符串s</span></span><br></pre></td></tr></table></figure>
-<h2 id="字符串-KMP算法">字符串-KMP算法</h2>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/implement-strstr/">KMP习题</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getNext</span><span class="params">(<span class="keyword">int</span>* next, <span class="keyword">const</span> string&amp; s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">-1</span>;</span><br><span class="line">        next[<span class="number">0</span>] = j;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123; <span class="comment">// 注意i从1开始</span></span><br><span class="line">            <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; s[i] != s[j + <span class="number">1</span>]) &#123; <span class="comment">// 前后缀不相同了</span></span><br><span class="line">                j = next[j]; <span class="comment">// 向前回退</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == s[j + <span class="number">1</span>]) &#123; <span class="comment">// 找到相同的前后缀</span></span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            next[i] = j; <span class="comment">// 将j（前缀的长度）赋给next[i]</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">strStr</span><span class="params">(string haystack, string needle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (needle.<span class="built_in">size</span>() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> next[needle.<span class="built_in">size</span>()];</span><br><span class="line">        <span class="built_in">getNext</span>(next, needle);</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">-1</span>; <span class="comment">// // 因为next数组里记录的起始位置为-1</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; haystack.<span class="built_in">size</span>(); i++) &#123; <span class="comment">// 注意i就从0开始</span></span><br><span class="line">            <span class="keyword">while</span>(j &gt;= <span class="number">0</span> &amp;&amp; haystack[i] != needle[j + <span class="number">1</span>]) &#123; <span class="comment">// 不匹配</span></span><br><span class="line">                j = next[j]; <span class="comment">// j 寻找之前匹配的位置</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (haystack[i] == needle[j + <span class="number">1</span>]) &#123; <span class="comment">// 匹配，j和i同时向后移动</span></span><br><span class="line">                j++; <span class="comment">// i的增加在for循环里</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (j == (needle.<span class="built_in">size</span>() - <span class="number">1</span>) ) &#123; <span class="comment">// 文本串s里出现了模式串t</span></span><br><span class="line">                <span class="keyword">return</span> (i - needle.<span class="built_in">size</span>() + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>KMP算法的理解还是比较困难…</p>
-<p>其核心在于建立next数组，next[i]表示该位发生冲突后，子串应该回退到的前一位j，因为在匹配字符串的过程中总是匹配j+1位置上的字符。</p>
-<p>也可以理解为，从0-next[j]位能够和从j-next[j]到第j位能够完全匹配，next[j]的作用只是方便我们进行第j+1位的匹配，即比较s[i]和s[j+1]是否相同，s[i]和s[j+1]均为我们需要比较的字符，而s[j]因为完全匹配，不需要进行比较。</p>
-<p>建立next数组和查询子串时：</p>
+<h2 id="二叉树-中序、前序和中序、后序构造二叉树"><a href="#二叉树-中序、前序和中序、后序构造二叉树" class="headerlink" title="二叉树-中序、前序和中序、后序构造二叉树"></a>二叉树-中序、前序和中序、后序构造二叉树</h2><p>首先回忆一下如何根据两个顺序构造一个唯一的二叉树，相信理论知识大家应该都清楚，就是以 后序数组的最后一个元素为切割点，先切中序数组，根据中序数组，反过来在切后序数组。一层一层切下去，每次后序数组最后一个元素就是节点元素。</p>
+<p>那代码应该怎么写呢？</p>
+<p>说到一层一层切割，就应该想到了递归。</p>
+<p>来看一下一共分几步：</p>
 <ul>
-<li>j总是初始化为-1；</li>
-<li>next数组中next[0]=-1;</li>
-<li>i在建立next数组时从1开始；</li>
-<li>j指代当前需要进行匹配字符的前一个字符下标，即j之前（包括j）是符合匹配条件的；</li>
-<li>i指代当前需要匹配的字符串字符。</li>
+<li>第一步：如果数组大小为零的话，说明是空节点了。</li>
+<li>第二步：如果不为空，那么取后序数组最后一个元素作为节点元素。</li>
+<li>第三步：找到后序数组最后一个元素在中序数组的位置，作为切割点</li>
+<li>第四步：构造根节点，确定中序数组左区间长度，用于切分后序数组的左右区间</li>
+<li>第五步：切割中序数组和后序数组，递归处理左区间和右区间，生成根节点的左右子树</li>
 </ul>
-<h2 id="栈与队列-用栈实现队列">栈与队列-用栈实现队列</h2>
-<p>用栈实现队列，需要两个栈，一个栈为输入栈，另一个为输出栈</p>
-<p>队列的push操作直接将数据push到输入栈即可；</p>
-<p>队列的pop操作首先检查输出栈是否为空，为空时将输入栈元素出栈，并入栈到输出栈中，不为空时直接pop输出栈；</p>
-<p>队列的判空即判断输入栈和输出栈是否同时为空即可。</p>
-<h2 id="栈与队列-用队列实现栈">栈与队列-用队列实现栈</h2>
-<p>用队列实现栈，只需要一个队列，假设队列元素个数为n：</p>
-<p>栈的push操作直接push到队列即可；</p>
-<p>栈的pop操作，需要使用队列进行n-1次pop()和push(),最后一次pop的元素即为栈顶元素；</p>
-<p>栈的top操作，需要使用队列进行n次的pop()和push(),最后一次pop的元素即为栈顶元素，查看后push回去；</p>
-<h2 id="栈-对称匹配">栈-对称匹配</h2>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/valid-parentheses/">有效的括号</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/">逆波兰表达式</a>可以使用栈来解决。</p>
-<p>由于栈结构的特殊性，非常适合做<strong>对称匹配类</strong>的题目。</p>
-<p><strong>要写代码之前要分析好有哪几种不匹配的情况，如果不动手之前分析好，写出的代码也会有很多问题。</strong></p>
-<h2 id="队列-优先队列">队列-优先队列</h2>
-<p>优先队列初始化：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;,vector&lt;pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;&gt;,cmp&gt; pq;</span><br></pre></td></tr></table></figure>
-<p>优先队列重写比较方法：</p>
-<p><strong>优先队列需要重载&quot;()&quot;运算符。</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">cmp</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span> <span class="params">(<span class="keyword">const</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; a, <span class="keyword">const</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; b)</span></span>&#123;</span><br><span class="line">            <span class="keyword">return</span> a.second&gt;b.second;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>vector重写比较方法：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(string a,string b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a&lt;b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="总结">总结</h2>
-<p>又是快11点了，溜了溜了，回去洗衣服~！</p>
+<p>切割过程中要特别注意<strong>左右区间的取值范围</strong>，并在处理过程中只使用<strong>左闭右闭区间</strong>或左闭右开区间中的一种。</p>
+<p><strong>注意类似用数组构造二叉树的题目，每次分隔尽量不要定义新的数组，而是通过下标索引直接在原数组上操作，这样可以节约时间和空间上的开销。</strong></p>
+<h2 id="二叉树-合并二叉树"><a href="#二叉树-合并二叉树" class="headerlink" title="二叉树-合并二叉树"></a>二叉树-合并二叉树</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/merge-two-binary-trees/">合并二叉树</a></p>
+<p>如何同时遍历两个二叉树呢？</p>
+<p>其实<strong>和遍历一个树逻辑是一样</strong>的，只不过传入两个树的节点，同时操作。</p>
+<h2 id="二叉树-二叉搜索树"><a href="#二叉树-二叉搜索树" class="headerlink" title="二叉树-二叉搜索树"></a>二叉树-二叉搜索树</h2><p>二叉搜索树是一个有序树：</p>
+<ul>
+<li>若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值；</li>
+<li>若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值；</li>
+<li>它的左、右子树也分别为二叉搜索树</li>
+</ul>
+<p>这就决定了，二叉搜索树，递归遍历和迭代遍历和普通二叉树都不一样。</p>
+<p><strong>递归：</strong></p>
+<p>二叉搜索树递归只需要递归其中一条边即可；</p>
+<p><strong>迭代：</strong></p>
+<p>可以不使用辅助栈或队列，因为不需要回溯，就能写出查找值的过程。</p>
+<p>以上，均是因为二叉搜索树的有序性。</p>
+<h2 id="二叉树-验证二叉搜索树"><a href="#二叉树-验证二叉搜索树" class="headerlink" title="二叉树-验证二叉搜索树"></a>二叉树-验证二叉搜索树</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/validate-binary-search-tree/">验证二叉搜索树</a>的要点：</p>
+<p>递归遍历时，<strong>二叉搜索树的上一个节点值必须小于当前节点值</strong>，而并非对一个根节点，左右子节点简单的小于根节点的值。</p>
+<p>通常采用中序递归遍历，因为是按左、中、右进行比较的。</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-absolute-difference-in-bst/">二叉搜索树的最小绝对差</a></p>
+<p><strong>遇到在二叉搜索树上求什么最值，求差值之类的，都要思考一下二叉搜索树可是有序的，要利用好这一特点。</strong></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>今天跟二叉树杠了一天，好累~！11点了，回去洗澡~！</p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/undefined/2022-05-06刷题笔记/" data-toggle="tooltip" data-placement="top" title="2022_05_06刷题笔记">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/undefined/2022-05-04刷题笔记/" data-toggle="tooltip" data-placement="top" title="2022_05_04刷题笔记">Next Post &rarr;</a>
+            <a href="/undefined/2022-05-05刷题笔记/" data-toggle="tooltip" data-placement="top" title="2022_05_05刷题笔记">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -614,7 +563,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=2022_05_05刷题笔记&body=Hi,I found this website and thought you might like it https://jevinz.github.io/undefined/2022-05-05刷题笔记/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=2022_05_06刷题笔记&body=Hi,I found this website and thought you might like it https://jevinz.github.io/undefined/2022-05-06刷题笔记/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -652,7 +601,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">2022_05_05 刷题笔记</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%B5%AE%E7%B5%AE%E5%8F%A8%E5%8F%A8"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">絮絮叨叨</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8-%E5%9F%BA%E7%A1%80"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">哈希表-基础</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8-Set%E7%9A%84%E7%BC%BA%E9%99%B7"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">哈希表-Set的缺陷</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">哈希表-什么时候使用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8-%E6%95%B0%E7%BB%84%E5%92%8CSet%E7%9A%84%E5%B1%80%E9%99%90"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">哈希表-数组和Set的局限</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2-%E5%8F%8D%E8%BD%AC"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">字符串-反转</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2-%E6%95%B0%E7%BB%84%E5%A1%AB%E5%85%85"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">字符串-数组填充</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">字符串常用函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2-KMP%E7%AE%97%E6%B3%95"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">字符串-KMP算法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97-%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">栈与队列-用栈实现队列</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97-%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">栈与队列-用队列实现栈</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A0%88-%E5%AF%B9%E7%A7%B0%E5%8C%B9%E9%85%8D"><span class="toc-nav-number">1.12.</span> <span class="toc-nav-text">栈-对称匹配</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%98%9F%E5%88%97-%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97"><span class="toc-nav-number">1.13.</span> <span class="toc-nav-text">队列-优先队列</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.14.</span> <span class="toc-nav-text">总结</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2022-05-06%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">2022_05_06刷题笔记</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%B5%AE%E7%B5%AE%E5%8F%A8%E5%8F%A8"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">絮絮叨叨</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E5%9F%BA%E7%A1%80"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">二叉树-基础</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%80%92%E5%BD%92%E9%81%8D%E5%8E%86"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">二叉树-递归遍历</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">二叉树-迭代遍历</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">前序遍历</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">后序遍历</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">中序遍历</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">二叉树-层序遍历</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">二叉树-翻转二叉树</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">二叉树-平衡二叉树</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">二叉树-左叶子之和</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">二叉树-递归函数什么时候有返回值</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E4%B8%AD%E5%BA%8F%E3%80%81%E5%89%8D%E5%BA%8F%E5%92%8C%E4%B8%AD%E5%BA%8F%E3%80%81%E5%90%8E%E5%BA%8F%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">二叉树-中序、前序和中序、后序构造二叉树</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">二叉树-合并二叉树</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-nav-number">1.12.</span> <span class="toc-nav-text">二叉树-二叉搜索树</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-nav-number">1.13.</span> <span class="toc-nav-text">二叉树-验证二叉搜索树</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.14.</span> <span class="toc-nav-text">总结</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -854,7 +803,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "JevinZ";
     let ghPages = gh + ".github.io";
-    let pagePath = "undefined/2022-05-05刷题笔记/";
+    let pagePath = "undefined/2022-05-06刷题笔记/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
