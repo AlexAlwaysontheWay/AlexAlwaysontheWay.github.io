@@ -97,10 +97,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://jevinz.github.io/undefined/2022-05-04刷题笔记/">
+  <link rel="canonical" href="https://jevinz.github.io/undefined/2022-06-09工作笔记/">
   <title>
     
-      2022_05_04刷题笔记 - Always on the way
+      2022_06_09工作笔记 - Always on the way
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -344,14 +344,12 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#刷题" title="刷题">刷题</a>
-              
             </div>
-            <h1>2022_05_04刷题笔记</h1>
+            <h1>2022_06_09工作笔记</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Jia wei on
-              2022-05-04
+              2022-06-09
             </span>
 
 
@@ -359,11 +357,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">5</span> Minutes
+              Estimated Reading Time <span class="post-count">1</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.6k</span> In Total
+              Words <span class="post-count">0</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -425,82 +423,15 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>2022_05_04刷题笔记</h1>
-<h2 id="絮絮叨叨">絮絮叨叨</h2>
-<p>今天天气依然很好，蓝天白云的，也是天天做核酸的日子，童小姐还是出不来，只能自己一个人在工位刷题（+眼巴巴看着别人出去玩）。</p>
-<p>废话不多说，开始刷题！</p>
-<h2 id="数组-二分">数组-二分</h2>
-<p><strong>二分的使用主要是要注意二分的界限（循环不变量原则，这里不变量指二分的上上界和下届）：</strong></p>
-<p>1.while(left&lt;=right) + [left,right] +right=mid-1;（个人更倾向于这种）</p>
-<p>2.while(left&lt;right) + [left,right) + right=mid;</p>
-<p>使用以上两种都可，主要是使得取到每一个值，最后会收缩到一点。</p>
-<p><strong>二分的使用还需要确定最后的值：</strong></p>
-<p>1.如果数组中有要找的值，那么最后会因为找到值而跳出；</p>
-<p>2.如果没有：</p>
-<ul>
-<li>low下标所在元素比要找的值稍大；</li>
-<li>high下标所在元素比要找的值稍小。</li>
-</ul>
-<h2 id="数组-移除元素">数组-移除元素</h2>
-<p>删除元素通常能想到的一种办法是：</p>
-<p>利用循环找到该元素，然后把该元素后面的元素依次递补过来，复杂度为O(n^2)。</p>
-<p>能想到的另一种办法是：</p>
-<p>利用<strong>快慢指针</strong>进行覆盖，可以维护数组原有的顺序；</p>
-<p>也可以利用<strong>双端指针</strong>，从两头开始，虽然破坏了数组原有的顺序，但是能够以最少交换次数完成删除元素。双指针在特定场合下也可以发挥出很强的作用，帮助我们在O(n)时间复杂度完成算法。</p>
-<h2 id="数组-滑动窗口">数组-滑动窗口</h2>
-<p>滑动窗口经常用在在数组中寻找连续的一段符合条件的子串的问题。</p>
-<p>滑动窗口的实现要点是：</p>
-<p>1.<strong>确定要维护的窗口内是什么</strong>，一般往往是符合条件的子串；</p>
-<p>2.<strong>如何移动窗口结束位置，为了保证最优，窗口的结束位置常常是对数组的下标进行遍历；</strong></p>
-<p>3.<strong>如何移动窗口开始位置，窗口的开始位置往往在满足一定条件时进行收缩</strong>**。**收缩时需要维护开始的下标，有时还需要维护诸如子串长度等其他数据结构，这些数据结构往往是用来判断当前窗口内元素是否满足既定条件。</p>
-<h2 id="数组-循环不变量原则">数组-循环不变量原则</h2>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/spiral-matrix-ii/">螺旋矩阵</a>的打印就是一个模拟的过程，但是在这个过程中如果没有确定好每次循环的边界，那么就容易模拟出错，导致bug层出不穷的情况。</p>
-<p>在进行模拟过程中，要坚持循环不变量原则，如同二分法中确定左右界限是左闭右开还是左闭右闭。只要确定了每次循环的界限，再加入多次循环就能保证不出现错误了。</p>
-<h2 id="链表-基础">链表-基础</h2>
-<p>链表的定义：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单链表</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;  <span class="comment">// 节点上存储的元素</span></span><br><span class="line">    ListNode *next;  <span class="comment">// 指向下一个节点的指针</span></span><br><span class="line">    <span class="built_in">ListNode</span>(<span class="keyword">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">next</span>(<span class="literal">NULL</span>) &#123;&#125;  <span class="comment">// 节点的构造函数</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="链表-删除元素">链表-删除元素</h2>
-<p>链表删除元素时，需要注意，头节点的处理方式和其他节点不同：</p>
-<p>对于其他节点，需要将该节点前一个节点的next指针置为下一个节点，然后释放该节点内存；</p>
-<p>对于头节点，则需要将头节点指向下一个节点，然后删除头节点；</p>
-<p>这样处理过于麻烦，我们可以<strong>使用一个虚拟头节点指向头节点</strong>，这样链表中每一个元素的删除方法就会是完全一样的，方便了我们的操作。</p>
-<h2 id="链表-链表反转">链表-链表反转</h2>
-<p>链表反转元素需要指向前一个元素的指针prev（初始化为null），指向当前要处理的元素指针ptr（初始化为head），并在原地反转时需要临时保存ptr的下一个元素，以便迭代下一轮操作。</p>
-<h2 id="链表-链表交换">链表-链表交换</h2>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/swap-nodes-in-pairs/">链表元素交换</a>最好办法是<strong>画图</strong>确定（能够使思路更加清晰）：</p>
-<p>1.画图确定一个循环中需要参与的节点；</p>
-<p>2.画出并确定交换次序；</p>
-<p>3.更新链表，注意空指针；</p>
-<p>处理该类问题时，<strong>创建一个伪头节点</strong>，可以将头节点的处理简化为和其他节点相同，大大简化了代码量。</p>
-<p>对于两两的链表交换，需要确定：</p>
-<ul>
-<li>第一个元素</li>
-<li>第二个元素</li>
-<li>第一个元素前一个的元素</li>
-</ul>
-<p>同时在交换前存储第二个元素后一个元素。</p>
-<h2 id="链表-删除倒数第N个元素">链表-删除倒数第N个元素</h2>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">删除倒数第n个元素</a>使用双指针+伪头节点即可完成。</p>
-<h2 id="链表-环形链表">链表-环形链表</h2>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle-ii/">环形链表</a>使用快慢指针即可解决：</p>
-<p>1.快慢指针初始均设置为head节点，快指针每次走两步，慢指针每次走1步，由于其每次差了1步，因此若有环，快指针在追击慢指针时必定相遇，若无环，则fast会首先到达链表终点，返回null;</p>
-<p>2.通过快慢指针所走路程的数学推导，从相遇节点和head节点同时开始向前走，必定相遇，相遇节点即为链表入环的第一个节点。</p>
-<h2 id="总结">总结</h2>
-<p>今天主要刷了一下数组和链表模块，跟着<a target="_blank" rel="noopener" href="https://programmercarl.com/%E9%93%BE%E8%A1%A8%E6%80%BB%E7%BB%93%E7%AF%87.html#%E6%80%BB%E7%BB%93">代码随想录</a>刷下来，感觉难度并不是很高，因为找实习已经快找了一个月了，刷题的话，这些基础的题型也都能够很简单的解决了，不过这次刷题还是让我掌握了比如<strong>二分的界限、滑动窗口的界限、循环不变量原则</strong>等等这些新知识，也能够让我以后再面对这些题型的时候更加游刃有余。</p>
-<p>早上九点到晚上九点，还是在五一假期，我真的都佩服我自己有多无聊，居然能坚持学习。巧了，童小姐刚跟我说她把头发剪完了，我已经迫不及待看看她的头发是啥样子了，那就到这，下个板块——哈希表见！</p>
-
+        
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/undefined/2022-05-05刷题笔记/" data-toggle="tooltip" data-placement="top" title="2022_05_05刷题笔记">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/cn/回归/" data-toggle="tooltip" data-placement="top" title="回归">Next Post &rarr;</a>
+            <a href="/undefined/2022-06-08刷题笔记/" data-toggle="tooltip" data-placement="top" title="2022_06_08刷题笔记">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -549,7 +480,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=2022_05_04刷题笔记&body=Hi,I found this website and thought you might like it https://jevinz.github.io/undefined/2022-05-04刷题笔记/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=2022_06_09工作笔记&body=Hi,I found this website and thought you might like it https://jevinz.github.io/undefined/2022-06-09工作笔记/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -587,7 +518,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">2022_05_04刷题笔记</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%B5%AE%E7%B5%AE%E5%8F%A8%E5%8F%A8"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">絮絮叨叨</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E7%BB%84-%E4%BA%8C%E5%88%86"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">数组-二分</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E7%BB%84-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">数组-移除元素</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E7%BB%84-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">数组-滑动窗口</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E7%BB%84-%E5%BE%AA%E7%8E%AF%E4%B8%8D%E5%8F%98%E9%87%8F%E5%8E%9F%E5%88%99"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">数组-循环不变量原则</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%93%BE%E8%A1%A8-%E5%9F%BA%E7%A1%80"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">链表-基础</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%93%BE%E8%A1%A8-%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">链表-删除元素</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%93%BE%E8%A1%A8-%E9%93%BE%E8%A1%A8%E5%8F%8D%E8%BD%AC"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">链表-链表反转</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%93%BE%E8%A1%A8-%E9%93%BE%E8%A1%A8%E4%BA%A4%E6%8D%A2"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">链表-链表交换</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%93%BE%E8%A1%A8-%E5%88%A0%E9%99%A4%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E5%85%83%E7%B4%A0"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">链表-删除倒数第N个元素</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%93%BE%E8%A1%A8-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">链表-环形链表</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.12.</span> <span class="toc-nav-text">总结</span></a></li></ol></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -609,8 +540,6 @@
             <a href="/tags/">FEATURED TAGS</a>
           </h5>
           <div class="tags">
-            
-            <a class="tag" href="/tags/#刷题" title="刷题">刷题</a>
             
           </div>
         </section>
@@ -791,7 +720,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "JevinZ";
     let ghPages = gh + ".github.io";
-    let pagePath = "undefined/2022-05-04刷题笔记/";
+    let pagePath = "undefined/2022-06-09工作笔记/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
