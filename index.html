@@ -411,6 +411,124 @@
   <!-- top end -->
   
 
+  <a href="/undefined/Java前后端传递json数据并通过ZeroMQ发送详解/">
+    <h2 class="post-title">
+      Java前后端传递json数据并通过ZeroMQ发送详解
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      问题
+项目需要，需要将前端的用户填写的表单内容处理以后转成Json的格式，然后发送到后端，后端再通过Zero MQ接口发送到另一台服务器，由另一台服务器来接手处理。
+流程
+
+在前端获取表单数据，通过ajax发送到后端
+后端建立合适的数据结构进行数据接收
+建立合适ZeroMQ通信接口发送数据
+
+具体步骤
+前端
+获取表单数据
+获取表单数据的过程较为简单，代码如下：
+123456789101112......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Jia wei on
+    2022-06-23
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/ZeroMQ-Java和Python的连接通信入门/">
+    <h2 class="post-title">
+      ZeroMQ-Java和Python的连接通信入门
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      模型
+通信的模型采用PUSH和PULL的通信模型。
+踩坑点
+无论是在Java还是Python中：
+
+PUSH的端口要给出本机的地址，PULL的端口则使用*，表示在该端口监听；
+并且PUSH只需要使用connect()方法连接端口即可，PULL需要采用bind()进行绑定端口。
+
+在刚开始使用时错误地都使用*，并且都bind(),导致通信失败。
+代码
+Java
+1234567891011121......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Jia wei on
+    2022-06-23
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/2022-06-10工作笔记/">
+    <h2 class="post-title">
+      2022_06_10工作笔记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      工作内容-上午&amp;下午
+python 与数据库交互
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Jia wei on
+    2022-06-10
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/undefined/2022-06-09工作笔记/">
     <h2 class="post-title">
       2022_06_09工作笔记
@@ -677,130 +795,6 @@ python写数据库还需要【明天】进行进一步测试
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/2022-05-05刷题笔记/">
-    <h2 class="post-title">
-      2022_05_05刷题笔记
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      2022_05_05 刷题笔记
-絮絮叨叨
-快（苦）乐（逼）的劳动节5天假期就这么结束了，今天又开始上班了，虽然想想心有不甘但好像疫情原因大家都出不去，那就这样吧，等疫情散去，希望我们能活得更快乐！今天天气也是大晴天呀，那就开始今天的刷题叭！
-哈希表-基础
-哈希表的实现通常有：
-
-数组
-Set
-Map
-
-具体地，Set和Map还有以下分类：
-
-
-
-集合
-底层实现
-是否有序
-数值是否可以重复
-查......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Jia wei on
-    2022-05-05
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/undefined/2022-05-04刷题笔记/">
-    <h2 class="post-title">
-      2022_05_04刷题笔记
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      2022_05_04刷题笔记
-絮絮叨叨
-今天天气依然很好，蓝天白云的，也是天天做核酸的日子，童小姐还是出不来，只能自己一个人在工位刷题（+眼巴巴看着别人出去玩）。
-废话不多说，开始刷题！
-数组-二分
-二分的使用主要是要注意二分的界限（循环不变量原则，这里不变量指二分的上上界和下届）：
-1.while(left&lt;=right) + [left,right] +right=mid-1;（个......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Jia wei on
-    2022-05-04
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#刷题" title="刷题">刷题</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/回归/">
-    <h2 class="post-title">
-      回归
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      回归
-过去的事
-上次写博客已经是去年的十月三号了，回想过去的七个月，自己没有坚持下来写真是非常惭愧，当时写博客的那股劲早都不知道跑到哪里去了。确实建立一个东西很简单，能坚持下去还是挺难的。去年十月从家里回来以后，大家的刷题热情也慢慢降了下去，自己也没坚持下来了…
-我刷题表上的刷题记录也停在了10月11日，乃至于后面博客也再没更新过。可能当时大家也没有那种刷题的激情，加上活动组织上的一点问题，......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Jia wei on
-    2022-05-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Thought" title="Thought">Thought</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -940,24 +934,24 @@ Map
 <div class="widget">
   <ul>
     
+    <a href="undefined/Java%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BC%A0%E9%80%92json%E6%95%B0%E6%8D%AE%E5%B9%B6%E9%80%9A%E8%BF%87ZeroMQ%E5%8F%91%E9%80%81%E8%AF%A6%E8%A7%A3/">
+      <li>Java前后端传递json数据并通过ZeroMQ发送详解</li>
+    </a>
+    
+    <a href="undefined/ZeroMQ-Java%E5%92%8CPython%E7%9A%84%E8%BF%9E%E6%8E%A5%E9%80%9A%E4%BF%A1%E5%85%A5%E9%97%A8/">
+      <li>ZeroMQ-Java和Python的连接通信入门</li>
+    </a>
+    
+    <a href="undefined/2022-06-10%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/">
+      <li>2022_06_10工作笔记</li>
+    </a>
+    
     <a href="undefined/2022-06-09%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/">
       <li>2022_06_09工作笔记</li>
     </a>
     
     <a href="undefined/2022-06-08%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/">
       <li>2022_06_08刷题笔记</li>
-    </a>
-    
-    <a href="undefined/2022-05-11%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/">
-      <li>2022_05_11刷题笔记</li>
-    </a>
-    
-    <a href="undefined/2022-05-10%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/">
-      <li>2022_05_10刷题笔记</li>
-    </a>
-    
-    <a href="undefined/2022-05-08%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/">
-      <li>2022_05_08刷题笔记</li>
     </a>
     
   </ul>
@@ -982,7 +976,7 @@ Map
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/06/">June 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/05/">May 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/09/">September 2021</a><span class="archive-list-count">6</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/06/">June 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/05/">May 2022</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/09/">September 2021</a><span class="archive-list-count">6</span></li></ul>
 </div>
 
 
